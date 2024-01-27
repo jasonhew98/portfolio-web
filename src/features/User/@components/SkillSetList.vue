@@ -3,7 +3,7 @@
 
 <script>
 export default {
-    name: "Contact",
+    name: "SkillSetList",
     props: {
     },
     data: function () {

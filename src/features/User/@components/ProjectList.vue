@@ -3,7 +3,7 @@
 
 <script>
 export default {
-    name: "Contact",
+    name: "ProjectList",
     props: {
     },
     data: function () {
