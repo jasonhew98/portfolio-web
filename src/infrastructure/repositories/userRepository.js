@@ -5,6 +5,7 @@ export default {
             firstName: "Jia Sheng",
             lastName: "Hew",
             preferredName: "Jason",
+            introduction: "I have over 4 years of experience in the tech industry.",
             countryCode: "+60",
             contactNumber: "126220832",
             email: "jasonhew1211@gmail.com",
@@ -39,6 +40,20 @@ export default {
                     startDate: "2020-08-19",
                     endDate: "",
                     description: "The success of every websites depends on search engine optimisation and digital marketing strategy."
+                }
+            ],
+            projects: [
+                {
+                    name: "Property Auction"
+                },
+                {
+                    name: "Big Data Analytic"
+                },
+                {
+                    name: "Budget Forecast Simulation"
+                },
+                {
+                    name: "Gen. AI"
                 }
             ]
         }];

@@ -1,18 +1,20 @@
 
 function assign(target, source) {
     source = source || {};
+    
+    target.email = source.email || '';
 
-    target.email = source.email || null;
-
-    target.firstName = source.firstName || null;
-    target.lastName = source.lastName || null;
-    target.contactNumber = source.contactNumber || null;
+    target.firstName = source.firstName || '';
+    target.lastName = source.lastName || '';
+    target.preferredName = source.preferredName || '';
+    target.countryCode = source.countryCode || '';
+    target.contactNumber = source.contactNumber || '';
+    target.introduction = source.introduction || '';
 
     target.workPreferences = source.workPreferences || [];
     target.skillSets = source.skillSets || [];
     target.jobHistory = source.jobHistory || [];
-
-    target.modifiedUTCDateTime = source.modifiedUTCDateTime || null;
+    target.projects = source.projects || [];
 
     return target;
 }
@@ -22,8 +24,13 @@ function createInstance(options) {
 }
 
 const mixin = {
-    fullName() {
-        return `${this.firstName} ${this.lastName}`;
+    methods: {
+
+    },
+    computed: {
+        fullName() {
+            return `${this.firstName} (${this.preferredName}) ${this.lastName}`;
+        }
     }
 }
 
