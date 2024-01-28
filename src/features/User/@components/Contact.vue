@@ -94,7 +94,7 @@ export default {
             senderMessage: null
         };
     },
-    created() {console.log(process.env)},
+    created() {},
     computed: {
     },
     methods: {
