@@ -17,7 +17,6 @@ export default {
     created() {},
     computed: {
         showScrollClass() {
-            console.log(window.scrollY)
             return window.scrollY >= 560 ? "show-scroll" : "";
         }
     }

@@ -9,7 +9,7 @@
                     <div class="about__description">
                         {{ introduction }}
                     </div>
-                    <div class="button button--flex">
+                    <div @click="downloadFile" class="button button--flex">
                         Download CV
                         <svg
                             class="button__icon"
@@ -57,11 +57,18 @@ export default {
     },
     data: function () {
         return {
-            
+            publicPath: process.env.BASE_URL
         };
     },
-    created() {},
+    created() {
+        console.log(process.env.BASE_URL)
+    },
     computed: {
+    },
+    methods: {
+        downloadFile() {
+            window.open('cv.pdf');
+        }
     }
 };
 </script>
