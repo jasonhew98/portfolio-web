@@ -68,6 +68,7 @@ export default {
     background-color: #FFFFFF;
     border-radius: 10px;
     margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .timeline ul li:last-child {
