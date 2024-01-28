@@ -109,7 +109,7 @@ export default {
         transform: translateX(-50%);
         width: 2px;
         height: 100%;
-        background-color: #311b92;
+        background-color: var(--text-color);
     }
 
     .timeline ul li {
@@ -138,7 +138,7 @@ export default {
         height: 20px;
         width: 20px;
         border-radius: 50%;
-        background-color: #4527a0;
+        background-color: var(--text-color);
         top: 0px;
     }
 
