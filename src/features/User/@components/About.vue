@@ -61,7 +61,6 @@ export default {
         };
     },
     created() {
-        console.log(process.env.BASE_URL)
     },
     computed: {
     },
@@ -73,7 +72,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .about__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;

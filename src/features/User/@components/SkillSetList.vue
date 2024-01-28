@@ -88,7 +88,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 
 .skills__container {
     grid-template-columns: repeat(2, 350px);

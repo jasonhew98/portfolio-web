@@ -41,7 +41,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .home__container {
     row-gap: 7rem;
 }

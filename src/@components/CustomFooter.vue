@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="footer__container content__container">
             <h1 class="footer__title">Jason Hew</h1>
-            <ul class="footer__list">
+            <!-- <ul class="footer__list">
                 <li>
                     <a href="#" class="footer__link">About</a>
                 </li>
@@ -12,7 +12,7 @@
                 <li>
                     <a href="#" class="footer__link">Testimonials</a>
                 </li>
-            </ul>
+            </ul> -->
 
             <div class="footer__social">
                 <a href="https://www.instagram.com/" class="footer__social-link" target="_blank">
@@ -49,7 +49,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 
 .footer {
     background-color: var(--container-color);
@@ -106,7 +106,7 @@ export default {
 
 .footer__copy {
     display: block;
-    margin-top: 4.5rem;
+    margin-top: 2.5rem;
     color: var(--title-color);
     text-align: center;
     font-size: var(--smaller-font-size);

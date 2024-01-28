@@ -5,7 +5,7 @@
 
         <div class="contact__container content__container grid">
             <div class="contact__content">
-                <h3 class="contact__title">Talk to me</h3>
+                <h3 class="contact__title">Reach out to me via</h3>
 
                 <div class="contact__info">
                     <div class="contact__card">
@@ -34,26 +34,26 @@
                 </div>
             </div>
             <div class="contact__content">
-                <h3 class="contact__title">Write me your project</h3>
+                <h3 class="contact__title">Drop me a message</h3>
 
-                <form class="contact__form">
+                <form ref="contactForm" class="contact__form" @submit.prevent="sendEmail">
                     <div class="contact__form-div">
                         <label class="contact__form-tag">Name</label>
-                        <input class="contact__form-input" type="text" name="name">
+                        <input class="contact__form-input" type="text" name="name" v-model="senderName">
                     </div>
 
                     <div class="contact__form-div">
                         <label class="contact__form-tag">Email</label>
-                        <input class="contact__form-input" type="email" name="email">
+                        <input class="contact__form-input" type="email" name="email" v-model="senderEmail">
                     </div>
 
                     <div class="contact__form-div contact__form-area">
-                        <label class="contact__form-tag">Project</label>
-                        <textarea class="contact__form-input" name="project" cols="30" rows="10"></textarea>
+                        <label class="contact__form-tag">Message</label>
+                        <textarea class="contact__form-input" name="message" cols="30" rows="10" v-model="senderMessage"></textarea>
                     </div>
 
-                    <div class="button button--flex">
-                        Send Message
+                    <div class="button button--flex" @click="sendEmail">
+                        Send
                         <svg
                             class="button__icon"
                             xmlns="http://www.w3.org/2000/svg"
@@ -78,6 +78,8 @@
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+
 export default {
     name: "Contact",
     props: {
@@ -87,16 +89,37 @@ export default {
     },
     data: function () {
         return {
-            
+            senderName: null,
+            senderEmail: null,
+            senderMessage: null
         };
     },
-    created() {},
+    created() {console.log(process.env)},
     computed: {
+    },
+    methods: {
+        sendEmail() {
+            emailjs.sendForm(
+                process.env.VUE_APP_EMAIL_SERVICE_SERVICE_ID,
+                process.env.VUE_APP_EMAIL_SERVICE_TEMPLATE_ID,
+                this.$refs['contactForm'],
+                process.env.VUE_APP_EMAIL_SERVICE_PUBLIC_KEY)
+            .then((result) => {
+                this.resetForm();
+            }, (error) => {
+                // Do nothing for now
+            });
+        },
+        resetForm() {
+            this.senderName = null;
+            this.senderEmail = null;
+            this.senderMessage = null;
+        }
     }
 };
 </script>
 
-<style>
+<style lang="scss">
 
 .contact__container {
     grid-template-columns: repeat(2, max-content);

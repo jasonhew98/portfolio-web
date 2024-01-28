@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 
 .scrollup {
     position: fixed;

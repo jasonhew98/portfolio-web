@@ -61,7 +61,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
 .home__scroll {
     margin-left: 9.25rem;
 }
