@@ -30,6 +30,9 @@ const mixin = {
     computed: {
         fullName() {
             return `${this.firstName} (${this.preferredName}) ${this.lastName}`;
+        },
+        nickname() {
+            return `${this.preferredName} ${this.lastName}`;
         }
     }
 }
