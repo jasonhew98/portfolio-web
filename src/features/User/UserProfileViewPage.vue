@@ -17,7 +17,7 @@
             :introduction="introduction"/>
         <skill-set-list ref="skills" :skillSets="skillSets"/>
         <job-history-timeline ref="experiences" :jobHistory="jobHistory"/>
-        <project-list ref="projects" :projects="projects"/>
+        <!-- <project-list ref="projects" :projects="projects"/> -->
         <contact 
             ref="contact"
             :countryCode="countryCode"
@@ -93,12 +93,12 @@ export default {
                     iconClass: "uil-briefcase-alt",
                     ref: "experiences"
                 },
-                {
-                    id: 5,
-                    displayName: "Projects",
-                    iconClass: "uil-scenery",
-                    ref: "projects"
-                },
+                // {
+                //     id: 5,
+                //     displayName: "Projects",
+                //     iconClass: "uil-scenery",
+                //     ref: "projects"
+                // },
                 {
                     id: 6,
                     displayName: "Contact",
