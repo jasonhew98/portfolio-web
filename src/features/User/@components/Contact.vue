@@ -12,12 +12,12 @@
                         <i class="bx bx-mail-send contact__card-icon"></i>
 
                         <h3 class="contact__card-title">Email</h3>
-                        <span class="contact__card-data">jasonhew1211@gmail.com</span>
+                        <span @click="redirectEmail" class="contact__card-data">jasonhew1211@gmail.com</span>
 
-                        <div class="contact__button">
+                        <!-- <div class="contact__button">
                             Write me
                             <i class="bx bx-right-arrow-alt contact__button-icon"></i>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="contact__card">
@@ -26,10 +26,10 @@
                         <h3 class="contact__card-title">WhatsApp</h3>
                         <span class="contact__card-data">+60 12 622 0832</span>
 
-                        <div class="contact__button">
+                        <!-- <div class="contact__button">
                             Write me
                             <i class="bx bx-right-arrow-alt contact__button-icon"></i>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -110,6 +110,9 @@ export default {
                 // Do nothing for now
             });
         },
+        redirectEmail() {
+            window.location.href = 'mailto:jasonhew1211@gmail.com';
+        },
         resetForm() {
             this.senderName = null;
             this.senderEmail = null;
@@ -167,6 +170,7 @@ export default {
 .contact__card-data {
     display: block;
     margin-bottom: var(--mb-0-75);
+    cursor: pointer;
 }
 
 .contact__button {
@@ -176,6 +180,7 @@ export default {
     align-items: center;
     justify-content: center;
     column-gap: 0.25rem;
+    cursor: pointer;
 }
 
 .contact__button-icon {
