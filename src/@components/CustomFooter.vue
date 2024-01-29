@@ -15,8 +15,8 @@
             </ul> -->
 
             <div class="footer__social">
-                <a href="https://www.instagram.com/" class="footer__social-link" target="_blank">
-                    <i class='bx bxl-instagram' ></i>
+                <a href="https://discord.com/users/nyann1211" class="footer__social-link" target="_blank">
+                    <i class='bx bxl-discord' ></i>
                 </a>
                 <a href="https://linkedin.com/in/jia-sheng-hew" class="footer__social-link" target="_blank">
                     <i class='bx bxl-linkedin-square'></i>

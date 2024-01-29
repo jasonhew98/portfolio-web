@@ -1,7 +1,7 @@
 <template>
     <div class="home__social">
-        <a href="https://www.instagram.com/" class="home__social-icon" target="_blank">
-            <i class="uil uil-instagram"></i>
+        <a href="https://discord.com/users/nyann1211" class="home__social-icon" target="_blank">
+            <i class='bx bxl-discord-alt'></i>
         </a>
         <a href="https://linkedin.com/in/jia-sheng-hew" class="home__social-icon" target="_blank">
             <i class="uil uil-linkedin-alt"></i>

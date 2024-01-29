@@ -12,7 +12,7 @@
                         <i class="bx bx-mail-send contact__card-icon"></i>
 
                         <h3 class="contact__card-title">Email</h3>
-                        <span @click="redirectEmail" class="contact__card-data">jasonhew1211@gmail.com</span>
+                        <span @click="redirectEmail" class="contact__card-data">{{ email }}</span>
 
                         <!-- <div class="contact__button">
                             Write me
