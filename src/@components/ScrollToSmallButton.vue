@@ -36,7 +36,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .scrollup {
     position: fixed;
@@ -48,6 +48,7 @@ export default {
     border-radius: 0.4rem;
     z-index: var(--z-tooltip);
     transition: .4s;
+    cursor: pointer;
 }
 
 .scrollup__icon {
