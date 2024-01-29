@@ -114,6 +114,7 @@ export default {
 }
 
 .about__description {
+    line-height: 20px;
     padding: 0 4rem 0 0;
     margin-bottom: var(--mb-2-5);
 }

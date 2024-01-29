@@ -86,6 +86,7 @@ export default {
 }
 
 .home__description {
+    line-height: 20px;
     max-width: 400px;
     margin-bottom: var(--mb-3);
 }

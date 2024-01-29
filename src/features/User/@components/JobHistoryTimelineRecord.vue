@@ -63,5 +63,6 @@ export default {
 
     .description ul li {
         margin-bottom: 0.25rem;
+        line-height: 20px;
     }
 </style>
