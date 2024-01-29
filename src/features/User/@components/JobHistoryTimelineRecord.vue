@@ -62,5 +62,6 @@ export default {
     }
 
     .description ul li {
+        margin-bottom: 0.25rem;
     }
 </style>
