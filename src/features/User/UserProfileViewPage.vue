@@ -1,8 +1,7 @@
 <template>
     <div>
         <nav-bar
-            :options="navBarOptions"
-            @goToView="goToView"></nav-bar>
+            :options="navBarOptions"></nav-bar>
         <home 
             ref="home"
             :firstName="firstName"
@@ -23,6 +22,7 @@
             :countryCode="countryCode"
             :contactNumber="contactNumber"
             :email="email"/>
+        <scroll-to-small-button/>
     </div>
 </template>
 
@@ -37,6 +37,8 @@ import ProjectList from './@components/ProjectList.vue';
 import Contact from './@components/Contact.vue';
 import pageBehaviour from '@/seedwork/pageBehaviour.js';
 
+import ScrollToSmallButton from '@/@components/ScrollToSmallButton.vue';
+
 export default {
     name: 'UserProfileViewPage',
     mixins: [RecordMixin, pageBehaviour],
@@ -47,7 +49,8 @@ export default {
         JobHistoryTimeline,
         SkillSetList,
         ProjectList,
-        Contact
+        Contact,
+        ScrollToSmallButton
     },
     props: { },
     provide() {
@@ -119,9 +122,6 @@ export default {
             } catch (ex) {
                 console.log(ex)
             }
-        },
-        goToView(ref) {
-            this.scrollToView(ref);
         }
     },
     watch: {

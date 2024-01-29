@@ -1,5 +1,5 @@
 <template>
-    <a href="" class="scrollup" :class="showScrollClass">
+    <a class="scrollup" :class="showScrollClass" @click="scrollToView">
         <i class="uil uil-arrow-up scrollup__icon"></i>
     </a>
 </template>
@@ -9,15 +9,28 @@ export default {
     name: "ScrollToSmallButton",
     props: {
     },
+    inject: ["goToView"],
     data: function () {
         return {
             
         };
     },
-    created() {},
+    created() {
+        window.addEventListener("scroll", function() {
+            const scrollUp = document.querySelector(".scrollup");
+
+            if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
+            else scrollUp.classList.remove("show-scroll");
+        })
+    },
     computed: {
         showScrollClass() {
             return window.scrollY >= 560 ? "show-scroll" : "";
+        }
+    },
+    methods: {
+        scrollToView() {
+            this.goToView("home");
         }
     }
 };

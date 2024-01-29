@@ -2,17 +2,16 @@
   	<div>
 		<router-view></router-view>
 		<custom-footer/>
-		<scroll-to-small-button/>
 	</div>
 </template>
 
 <script>
 import CustomFooter from './@components/CustomFooter.vue';
-import ScrollToSmallButton from './@components/ScrollToSmallButton.vue';
+
 export default {
+	name: "App",
 	components: {
-		CustomFooter,
-		ScrollToSmallButton
+		CustomFooter
 	},
 	data() {
 		return {
