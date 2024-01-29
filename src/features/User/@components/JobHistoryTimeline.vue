@@ -4,7 +4,7 @@
 
         <div class="timeline__container">
             <div class="timeline">
-                <ul>
+                <ul class="timeline__list">
                     <JobHistoryTimelineRecord v-for="(job, index) in jobHistory"
                         :key="index"
                         :record="job">
@@ -59,11 +59,11 @@ export default {
     position: relative;
 }
 
-.timeline ul {
+.timeline .timeline__list {
     list-style: none;
 }
 
-.timeline ul li {
+.timeline .timeline__list .timeline__list--row {
     padding: 20px;
     background-color: #FFFFFF;
     border-radius: 10px;
@@ -71,7 +71,7 @@ export default {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.timeline ul li:last-child {
+.timeline .timeline__list .timeline__list--row:last-child {
     margin-bottom: 0;
 }
 
@@ -113,27 +113,27 @@ export default {
         background-color: var(--text-color);
     }
 
-    .timeline ul li {
+    .timeline .timeline__list .timeline__list--row {
         width: 50%;
         position: relative;
         margin-bottom: 50px;
     }
 
-    .timeline ul li:nth-child(odd) {
+    .timeline .timeline__list .timeline__list--row:nth-child(odd) {
         float: left;
         clear: right;
         transform: translateX(-30px);
         border-radius: 20px 0px 20px 20px;
     }
     
-    .timeline ul li:nth-child(even) {
+    .timeline .timeline__list .timeline__list--row:nth-child(even) {
         float: right;
         clear: left;
         transform: translateX(30px);
         border-radius: 0px 20px 20px 20px;
     }
 
-    .timeline ul li::before {
+    .timeline .timeline__list .timeline__list--row::before {
         content: "";
         position: absolute;
         height: 20px;
@@ -143,12 +143,12 @@ export default {
         top: 0px;
     }
 
-    .timeline ul li:nth-child(odd)::before {
+    .timeline .timeline__list .timeline__list--row:nth-child(odd)::before {
         transform: translate(50%, -50%);
         right: -30px;
     }
 
-    .timeline ul li:nth-child(even)::before {
+    .timeline .timeline__list .timeline__list--row:nth-child(even)::before {
         transform: translate(-50%, -50%);
         left: -30px;
     }

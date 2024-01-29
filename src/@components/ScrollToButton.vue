@@ -1,7 +1,7 @@
 <template>
         <div class="home__scroll">
             <div class="home__scroll-button button--flex"
-                @click="goToView(ref)">
+                @click="goToView(elementRef)">
                 <svg
                     width="32px"
                     height="32px"
@@ -47,23 +47,25 @@
 export default {
     name: "ScrollToButton",
     props: {
-        ref: {type: String, required: false, default: ''}
+        elementRef: {type: String, required: false, default: ''}
     },
     inject: ["goToView"],
     data: function () {
-        return {
-            
-        };
+        return {};
     },
     created() {},
-    computed: {
-    }
+    computed: {},
+    methods: {}
 };
 </script>
 
 <style lang="scss">
 .home__scroll {
     margin-left: 9.25rem;
+}
+
+.home__scroll-button {
+    cursor: pointer;
 }
 
 .wheel {

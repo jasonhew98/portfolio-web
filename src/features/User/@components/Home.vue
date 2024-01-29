@@ -10,7 +10,7 @@
                         :preferredName="preferredName"
                         :introduction="introduction"/>
                 </div>
-                <scroll-to-button/>
+                <scroll-to-button :elementRef="reference"/>
             </div>
         </section>
 </template>
@@ -21,7 +21,7 @@ import Introduction from './Introduction.vue';
 import ScrollToButton from '@/@components/ScrollToButton.vue';
 import { mixin as RecordMixin } from '../user.js';
 export default {
-    name: "About",
+    name: "Home",
     mixins: [RecordMixin],
     components: { Social, Introduction, ScrollToButton },
     props: {
@@ -32,7 +32,7 @@ export default {
     },
     data: function () {
         return {
-            
+            reference: "about"
         };
     },
     created() {},

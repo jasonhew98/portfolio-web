@@ -1,15 +1,17 @@
 <template>
-    <li>
+    <li class="timeline__list--row">
         <div class="timeline__content">
             <div class="title">{{ jobTitle }}</div>
             <div class="title">{{ companyName }}</div>
             <div class="date__period">{{ datePeriod }}</div>
-            <p>{{ description }}</p>
+            <div class="description" v-html="description"></div>
         </div>
     </li>
 </template>
 
 <script>
+import { formatDateExcludeDay } from '@/seedwork/formatters/dateFormatter.js'
+
 export default {
     name: "JobHistoryTimelineRecord",
     props: {
@@ -32,10 +34,10 @@ export default {
             return this.job.companyName || "";
         },
         startDate() {
-            return this.job.startDate || "";
+            return formatDateExcludeDay(this.job.startDate) || "";
         },
         endDate() {
-            return this.job.endDate || "";
+            return formatDateExcludeDay(this.job.endDate) || "";
         },
         isCurrentJob() {
             return this.job.isCurrentJob;     
@@ -43,9 +45,22 @@ export default {
         description() {
             return this.job.description || "";
         },
-        datePeriod(job) {
-            return this.isCurrentJob ? this.startDate : `${this.startDate} - ${this.endDate}`;
+        datePeriod() {
+            return this.isCurrentJob ? `${this.startDate} - Present` : `${this.startDate} - ${this.endDate}`;
         }
     }
 };
 </script>
+
+<style>
+    .description {
+        padding: 0 15px;
+    }
+
+    .description ul {
+        list-style: circle;
+    }
+
+    .description ul li {
+    }
+</style>

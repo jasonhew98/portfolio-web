@@ -26,20 +26,20 @@ export default {
             ],
             jobHistory: [
                 {
-                    companyName: "Fusionex",
+                    companyName: "Fusionex Group",
                     jobTitle: "Android Developer (Intern)",
                     isCurrentJob: false,
                     startDate: "2020-02-17",
                     endDate: "2020-07-31",
-                    description: "The success of every websites depends on search engine optimisation and digital marketing strategy."
+                    description: "<ul><li>Actively involved in mobile app development for&nbsp;one of the leading financial institution in South East Asia.</li><li>Developed, enhanced, and debugged existing mobile app.</li><li>Revamped user interface to improve user experience.</li></ul>"
                 },
                 {
-                    companyName: "Fusionex",
+                    companyName: "Fusionex Group",
                     jobTitle: "Solutions Developer",
                     isCurrentJob: true,
                     startDate: "2020-08-19",
                     endDate: "",
-                    description: "The success of every websites depends on search engine optimisation and digital marketing strategy."
+                    description: "<ul><li>Active involvement in product development and delivery.</li><li>Solution designs and implementation.</li><li>Full stack web development.</li><li>Involve in research and development of modern tecnnologies such as OpenAI.</li></ul>"
                 }
             ],
             projects: [
