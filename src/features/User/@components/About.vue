@@ -1,7 +1,6 @@
 <template>
         <section class="about section">
             <h2 class="section__title">About Me</h2>
-            <span class="section__subtitle">My introduction</span>
             <div class="about__container content__container grid">
                 <img src="@/images/profile.gif" alt="" class="about__img">
                 <div class="about__data">

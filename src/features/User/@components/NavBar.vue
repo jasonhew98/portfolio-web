@@ -72,6 +72,10 @@ export default {
     column-gap: 1rem;
 }
 
+.nav__logo {
+    font-size: var(--h3-font-size);
+}
+
 .nav__logo,
 .nav__toggle {
     color: var(--title-color);
@@ -96,10 +100,10 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: var(--small-font-size);
+    font-size: var(--h3-font-size);
     color: var(--title-color);
     font-weight: var(--font-medium);
-    transition: .3s;
+    transition: all 300ms ease;
 }
 
 .nav__icon,

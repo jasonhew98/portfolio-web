@@ -1,7 +1,6 @@
 <template>
     <section class="contact section">
         <h2 class="section__title">Get in touch</h2>
-        <span class="section__subtitle">Contact Me</span>
 
         <div class="contact__container content__container grid">
             <div class="contact__content">

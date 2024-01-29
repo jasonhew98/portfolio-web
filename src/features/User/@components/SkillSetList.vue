@@ -1,7 +1,6 @@
 <template>
     <section class="skills section">
         <h2 class="section__title">Skills</h2>
-        <span class="section__subtitle">My technical level</span>
 
         <div class="skills__container content__container grid">
             <skill :title="frontendTitle" :skills="frontendSkills"/>
@@ -129,7 +128,7 @@ export default {
     column-gap: 0.5rem;
 }
 
-.skills .bx-badge-check {
+.skills .bxs-badge-check {
     font-size: 1rem;
     color: var(--title-color);
 }

@@ -86,8 +86,6 @@ export default {
 }
 
 .home__description {
-    text-align: justify;
-    text-justify: inter-word;
     max-width: 400px;
     margin-bottom: var(--mb-3);
 }

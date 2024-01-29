@@ -5,7 +5,7 @@ export default {
             firstName: "Jia Sheng",
             lastName: "Hew",
             preferredName: "Jason",
-            introduction: "I have over 4 years of experience in the tech industry.",
+            introduction: "Software Engineer. I have years of experience in full stack development specializing in backend development. I design and develop innovative web applications using modern technologies.",
             countryCode: "+60",
             contactNumber: "126220832",
             email: "jasonhew1211@gmail.com",
