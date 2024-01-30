@@ -53,14 +53,14 @@ export default {
         ScrollToSmallButton
     },
     props: { },
-    provide() {
-        return {
-            goToView: this.scrollToView
-        }
-    },
     data: function () {
         return {
             ...createInstance()
+        }
+    },
+    provide() {
+        return {
+            goToView: this.scrollToView
         }
     },
     async created() {

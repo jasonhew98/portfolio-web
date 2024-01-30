@@ -30,12 +30,12 @@ export default {
     props: {
         options: {type: Array, required: true, default() { return []; }}
     },
-    inject: ["goToView"],
     data: function () {
         return {
             showMenu: false
         };
     },
+    inject: ["goToView"],
     created() {},
     computed: {
         navMenuClass() {

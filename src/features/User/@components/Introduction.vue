@@ -38,12 +38,12 @@ export default {
         preferredName: {type: String, required: true, default: ''},
         introduction: {type: String, required: true, default: ''}
     },
-    inject: ["goToView"],
     data: function () {
         return {
             
         };
     },
+    inject: ["goToView"],
     created() {},
     computed: {
     },

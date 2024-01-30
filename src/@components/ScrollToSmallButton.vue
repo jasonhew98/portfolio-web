@@ -9,12 +9,12 @@ export default {
     name: "ScrollToSmallButton",
     props: {
     },
-    inject: ["goToView"],
     data: function () {
         return {
             
         };
     },
+    inject: ["goToView"],
     created() {
         window.addEventListener("scroll", function() {
             const scrollUp = document.querySelector(".scrollup");
