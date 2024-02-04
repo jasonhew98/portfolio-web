@@ -5,24 +5,67 @@ export default {
             firstName: "Jia Sheng",
             lastName: "Hew",
             preferredName: "Jason",
-            introduction: "Software Engineer. I have years of experience in full stack development specializing in backend development. I design and develop innovative web applications using modern technologies.",
+            introduction: "Software Engineer. Anime lover. I have years of experience in full stack development specializing in backend development. I design and develop innovative web applications using modern technologies.",
             countryCode: "+60",
             contactNumber: "126220832",
             email: "jasonhew1211@gmail.com",
             workPreferences: ["Remote", "Hybrid"],
             skillSets: [
                 {
-                    name: "C# .Net Core",
-                    proficiencyLevel: 10
+                    name: "C#",
+                    type: "backend",
+                    proficiencyLevel: "expert"
+                },
+                {
+                    name: ".Net Core",
+                    type: "backend",
+                    proficiencyLevel: "expert"
+                },
+                {
+                    name: "Node.js",
+                    type: "backend",
+                    proficiencyLevel: "intermediate"
+                },
+                {
+                    name: "Java",
+                    type: "backend",
+                    proficiencyLevel: "intermediate"
+                },
+                {
+                    name: "Python",
+                    type: "backend",
+                    proficiencyLevel: "intermediate"
+                },
+                {
+                    name: "MongoDb",
+                    type: "backend",
+                    proficiencyLevel: "intermediate"
+                },
+                {
+                    name: "HTML",
+                    type: "frontend",
+                    proficiencyLevel: "intermediate"
+                },
+                {
+                    name: "CSS",
+                    type: "frontend",
+                    proficiencyLevel: "intermediate"
                 },
                 {
                     name: "JavaScript",
-                    proficiencyLevel: 10
+                    type: "frontend",
+                    proficiencyLevel: "expert"
                 },
                 {
                     name: "Vue.js",
-                    proficiencyLevel: 10
-                }
+                    type: "frontend",
+                    proficiencyLevel: "expert"
+                },
+                {
+                    name: "Angular",
+                    type: "frontend",
+                    proficiencyLevel: "intermediate"
+                },
             ],
             jobHistory: [
                 {

@@ -9,7 +9,7 @@
                     <i class='bx bxs-badge-check'></i>
                     <div>
                         <h3 class="skills__name">{{ skill.name }}</h3>
-                        <span class="skills__level">{{ skill.level }}</span>
+                        <span class="skills__level">{{ proficiencyLevel(skill.proficiencyLevel) }}</span>
                     </div>
                 </div>
             </div>
@@ -26,11 +26,34 @@ export default {
     },
     data: function () {
         return {
-            
+            proficiencyLevelOptions: []
         };
     },
-    created() {},
+    async created() {
+        await this.loadOptions();
+    },
     computed: {
+        lookupRepository() {
+            return this.$repository.lookupRepository;
+        },
+        
+    },
+    methods: {
+        async loadOptions() {
+            const [
+                [err, proficiencyLevelOptions],
+            ] = await Promise.all([
+                this.lookupRepository.getProficiencyLevels(),
+            ]);
+
+            this.proficiencyLevelOptions = proficiencyLevelOptions;
+        },
+        proficiencyLevel(proficiencyLevel) {
+            if (this.proficiencyLevelOptions.length <= 0)
+                return;
+
+            return this.proficiencyLevelOptions.find(x => x.id === proficiencyLevel).name;
+        }
     }
 };
 </script>

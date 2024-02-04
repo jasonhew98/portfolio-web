@@ -49,10 +49,10 @@ export default {
     props: {
         elementRef: {type: String, required: false, default: ''}
     },
-    inject: ["goToView"],
     data: function () {
         return {};
     },
+    inject: ["goToView"],
     created() {},
     computed: {},
     methods: {}

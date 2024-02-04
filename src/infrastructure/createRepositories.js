@@ -1,7 +1,9 @@
+import lookupRepository from "./repositories/lookupRepository";
 import userRepository from "./repositories/userRepository";
 
 const repositories = {
-	userRepository
+	userRepository,
+    lookupRepository
 };
 
 const createRepositories = {

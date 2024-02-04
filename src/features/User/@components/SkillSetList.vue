@@ -32,56 +32,10 @@ export default {
             return "Backend developer";
         },
         frontendSkills() {
-            return [
-                {
-                    name: "HTML",
-                    level: "Intermediate"
-                },
-                {
-                    name: "CSS",
-                    level: "Intermediate"
-                },
-                {
-                    name: "JavaScript",
-                    level: "Advanced"
-                },
-                {
-                    name: "Vue.js",
-                    level: "Advanced"
-                },
-                {
-                    name: "Angular",
-                    level: "Intermediate"
-                }
-            ];
+            return this.skillSets.filter(x => x.type === "frontend");
         },
         backendSkills() {
-            return [
-                {
-                    name: "C#",
-                    level: "Advanced"
-                },
-                {
-                    name: ".Net Core",
-                    level: "Advanced"
-                },
-                {
-                    name: "Node.js",
-                    level: "Intermediate"
-                },
-                {
-                    name: "Java",
-                    level: "Intermediate"
-                },
-                {
-                    name: "Python",
-                    level: "Intermediate"
-                },
-                {
-                    name: "MongoDb",
-                    level: "Intermediate"
-                },
-            ];
+            return this.skillSets.filter(x => x.type === "backend");
         }
     }
 };
