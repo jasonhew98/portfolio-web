@@ -1,9 +1,11 @@
 import lookupRepository from "./repositories/lookupRepository";
+import authRepository from "./repositories/authRepository";
 import userRepository from "./repositories/userRepository";
 
 const repositories = {
+    lookupRepository,
+    authRepository,
 	userRepository,
-    lookupRepository
 };
 
 const createRepositories = {
