@@ -36,7 +36,6 @@ export default {
         lookupRepository() {
             return this.$repository.lookupRepository;
         },
-        
     },
     methods: {
         async loadOptions() {
