@@ -1,18 +1,18 @@
 <template>
-        <section class="home section">
-            <div class="home__container content__container grid">
-                <div class="home__content grid">
-                    <social/>
-                    <div class="home__img"></div>
-                    <introduction
-                        :firstName="firstName"
-                        :lastName="lastName"
-                        :preferredName="preferredName"
-                        :introduction="introduction"/>
-                </div>
-                <scroll-to-button :elementRef="reference"/>
+    <section class="home section">
+        <div class="home__container content__container grid">
+            <div class="home__content grid">
+                <social/>
+                <div class="home__img"></div>
+                <introduction
+                    :firstName="firstName"
+                    :lastName="lastName"
+                    :preferredName="preferredName"
+                    :introduction="introduction"/>
             </div>
-        </section>
+            <scroll-to-button :elementRef="reference"/>
+        </div>
+    </section>
 </template>
 
 <script>

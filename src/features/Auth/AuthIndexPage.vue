@@ -54,7 +54,9 @@
                 rememberMe: false,
             }
         },
-        created() {
+        async created() {
+            if (localStorage.getItem('jwt'))
+                this.goToProfile();
         },
         computed: {
             authRepository() {

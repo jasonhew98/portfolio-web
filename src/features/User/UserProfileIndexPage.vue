@@ -2,12 +2,6 @@
     <div>
         <nav-bar
             :options="navBarOptions"></nav-bar>
-        <section class="home section">
-            <div class="home__container content__container grid">
-                <button @click="logout">Log out</button>
-            </div>
-        </section>
-        
         <home 
             ref="home"
             :firstName="firstName"
@@ -58,7 +52,7 @@ export default {
         Contact,
         ScrollToSmallButton
     },
-    props: {},
+    props: { },
     data: function () {
         return {
             ...createInstance()
@@ -128,10 +122,6 @@ export default {
             } catch (ex) {
                 console.log(ex)
             }
-        },
-        async logout() {
-            localStorage.clear();
-            this.$router.push({name: "AuthIndexPage"});
         }
     },
     watch: {
