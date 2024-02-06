@@ -1,52 +1,42 @@
 <template>
-    <div class="page__container">
-        <div class="container" :class="{ 'active' : isSignUp }">
-            <div class="form-container sign-up">
-                <form>
-                    <h1>Create Your Account</h1>
-                    <div class="social-icons">
-                        <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
-                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                    <span>or use your email for registeration</span>
-                    <input type="text" placeholder="Name">
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <button>Sign Up</button>
-                </form>
-            </div>
-            <div class="form-container sign-in">
-                <form @submit.prevent="login">
-                    <h1>Sign In</h1>
-                    <div class="social-icons">
-                        <a href="#" class="icon"><i class="fa-brands fa-google"></i></a>
-                        <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
-                        <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                    <span>or use your email password</span>
-                    <input type="email" placeholder="Email" />
-                    <input type="password" placeholder="Password" />
-                    <a href="#">Forget Your Password?</a>
-                    <button>Sign In</button>
-                </form>
-            </div>
-            <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Already have an account?</p>
-                    <button class="hidden" @click="toggleLogin">Sign In</button>
+    <div class="auth__container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="row border rounded-5 p-3 bg-white shadow box-area auth__box">
+            <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left-box" style="background: #103cbe;">
+                <div class="featured-image mb-3">
+                    <img src="@/images/1.png" class="img-fluid" style="width: 250px;">
                 </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>New to Portfolio Hub?</p>
-                    <button class="hidden" @click="toggleSignUp">Create an account</button>
+                <p class="text-white fs-2" style="font-family: 'Courier New', Courier, monospace; font-weight: 600;">Be Verified</p>
+                <small class="text-white text-wrap text-center" style="width: 17rem;font-family: 'Courier New', Courier, monospace;">Join experienced Designers on this platform.</small>
+            </div>
+            <div class="col-md-6 right-box">
+                <div class="row align-items-center">
+                    <div class="header-text mb-4">
+                        <h2>Welcome!</h2>
+                        <p>We are happy to have you back.</p>
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg bg-light fs-6" placeholder="Username/Email" v-model="userName">
+                    </div>
+                    <div class="input-group mb-1">
+                        <input type="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" v-model="password">
+                    </div>
+                    <div class="input-group mb-5 d-flex justify-content-between">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="formCheck" v-model="rememberMe">
+                            <label for="formCheck" class="form-check-label text-secondary"><small>Remember Me</small></label>
+                        </div>
+                        <div class="forgot">
+                            <small><a href="#">Forgot Password?</a></small>
+                        </div>
+                    </div>
+                    <div class="input-group mb-3">
+                        <button class="btn btn-lg btn-primary w-100 fs-6" @click="login">Login</button>
+                    </div>
+                    <div class="row">
+                        <small>Don't have account? <a href="#">Sign Up</a></small>
+                    </div>
                 </div>
-            </div>
-            </div>
+            </div> 
         </div>
     </div>
 </template>
@@ -59,7 +49,9 @@
         components: {},
         data: function () {
             return {
-                isSignUp: false,
+                userName: null,
+                password: null,
+                rememberMe: false,
             }
         },
         created() {
@@ -72,14 +64,13 @@
         methods: {
             async login() {
                 const record = {
-                    userName: "nyann1211",
-                    password: "Dferas@98"
+                    userName: this.userName,
+                    password: this.password
                 }
 
                 try {
                     const [error, result] = await this.authRepository.login(record);
                     let jwtToken = result.jwtToken;
-                    console.log(result)
 
                     // Assuming you have the JWT token available as 'accessToken'
                     const accessToken = jwtToken.token;
@@ -89,8 +80,6 @@
 
                     // Set the cookie
                     document.cookie = `accessToken=${accessToken}; expires=${expiryDate}; path=/;`;
-                    console.log(accessToken)
-                    //setBearerToken(accessToken);
 
                     this.goToProfile();
                 } catch (ex) {
@@ -101,12 +90,6 @@
                 this.$router.push({
                     name: "UserProfileViewPage"
                 })
-            },
-            toggleLogin() {
-                this.isSignUp = false;
-            },
-            toggleSignUp() {
-                this.isSignUp = true;
             }
         },
         watch: {
@@ -116,204 +99,42 @@
 
 
 <style lang="scss" scoped>
-.page__container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.box-area {
+    width: 930px;
 }
 
-.container {
-    background-color: #fff;
+.right-box {
+    padding: 40px 30px 40px 40px;
+}
+
+::placeholder {
+    font-size: 16px;
+}
+
+.rounded-4 {
+    border-radius: 20px;
+}
+
+.rounded-5 {
     border-radius: 30px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
-    position: relative;
-    overflow: hidden;
-    width: 768px;
-    max-width: 100%;
-    min-height: 480px;
 }
 
-.container p {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.3px;
-    margin: 20px 0;
-}
-
-.container span {
-    font-size: 12px;
-}
-
-.container a {
-    color: #333;
-    font-size: 13px;
-    text-decoration: none;
-    margin: 15px 0 10px;
-}
-
-.container button {
-    background-color: #512da8;
-    color: #fff;
-    font-size: 12px;
-    padding: 10px 45px;
-    border: 1px solid transparent;
-    border-radius: 8px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.container button.hidden {
-    background-color: transparent;
-    border-color: #fff;
-}
-
-.container form {
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    height: 100%;
-}
-
-.container input {
-    background-color: #eee;
-    border: none;
-    margin: 8px 0;
-    padding: 10px 15px;
-    font-size: 13px;
-    border-radius: 8px;
-    width: 100%;
-    outline: none;
-}
-
-.form-container {
-    position: absolute;
-    top: 0;
-    height: 100%;
-    transition: all 0.4s ease-in-out;
-}
-
-.sign-in {
-    left: 0;
-    width: 50%;
-    z-index: 2;
-}
-
-.container.active .sign-in {
-    transform: translateX(100%);
-}
-
-.sign-up {
-    left: 0;
-    width: 50%;
-    opacity: 0;
-    z-index: 1;
-}
-
-.container.active .sign-up {
-    transform: translateX(100%);
-    opacity: 1;
-    z-index: 5;
-    animation: move 0.6s;
-}
-
-@keyframes move {
-    0%,
-    49.99% {
-        opacity: 0;
-        z-index: 1;
-    }
-    50%,
-    100% {
-        opacity: 1;
-        z-index: 5;
+@media only screen and (max-width: 992px) {
+    .auth__box {
+        margin: 0 10px;
     }
 }
 
-.social-icons {
-    margin: 20px 0;
-}
-
-.social-icons a {
-    border: 1px solid #ccc;
-    border-radius: 20%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 3px;
-    width: 40px;
-    height: 40px;
-}
-
-.toggle-container {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-    transition: all 0.4s ease-in-out;
-    border-radius: 150px 0 0 100px;
-    z-index: 1000;
-}
-
-.container.active .toggle-container {
-    transform: translateX(-100%);
-    border-radius: 0 150px 100px 0;
-}
-
-.toggle {
-    background-color: #512da8;
-    height: 100%;
-    background: linear-gradient(to right, #5c6bc0, #512da8);
-    color: #fff;
-    position: relative;
-    left: -100%;
-    height: 100%;
-    width: 200%;
-    transform: translateX(0);
-    transition: all 0.4s ease-in-out;
-}
-
-.container.active .toggle {
-    transform: translateX(50%);
-}
-
-.toggle-panel {
-    position: absolute;
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    top: 0;
-    transform: translateX(0);
-    transition: all 0.4s ease-in-out;
-}
-
-.toggle-left {
-    transform: translateX(-200%);
-}
-
-.container.active .toggle-left {
-    transform: translateX(0);
-}
-
-.toggle-right {
-    right: 0;
-    transform: translateX(0);
-}
-
-.container.active .toggle-right {
-    transform: translateX(200%);
+@media only screen and (max-width: 768px) {
+    .box-area {
+        margin: 0 10px;
+    }
+    .left-box {
+        height: 100px;
+        overflow: hidden;
+    }
+    .right-box {
+        padding: 20px;
+    }
 }
 </style>
