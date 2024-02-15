@@ -144,6 +144,7 @@ export default {
     .about__description {
         padding: 0 5rem;
         margin-bottom: 2rem;
+        text-align: start;
     }
 }
 
