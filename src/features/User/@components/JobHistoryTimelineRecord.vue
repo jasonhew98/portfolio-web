@@ -59,6 +59,8 @@ export default {
 
     .description ul {
         list-style: circle;
+        /* Override bootstrap */
+        padding-left: 0;
     }
 
     .description ul li {

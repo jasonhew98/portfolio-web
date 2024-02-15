@@ -61,6 +61,8 @@ export default {
 
 .timeline .timeline__list {
     list-style: none;
+    /* Override bootstrap */
+    padding-left: 0;
 }
 
 .timeline .timeline__list .timeline__list--row {

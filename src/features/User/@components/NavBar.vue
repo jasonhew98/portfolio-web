@@ -85,6 +85,10 @@ export default {
 .nav__list {
     display: flex;
     column-gap: 2rem;
+
+    /* Override bootstrap */
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
 .nav__item {
