@@ -38,7 +38,7 @@ export default {
     },
 	computed: {
 		showFooter() {
-			return !['/auth', '/edit/me'].includes(this.$route.path);
+			return !['/auth', '/profile/me', '/profile/me/edit'].includes(this.$route.path);
 		},
 	},
 	methods: {

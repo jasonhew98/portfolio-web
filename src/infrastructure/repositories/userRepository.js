@@ -25,57 +25,57 @@ export default {
                 skillSets: [
                     {
                         name: "C#",
-                        type: "backend",
+                        skillType: "backend",
                         proficiencyLevel: "expert"
                     },
                     {
                         name: ".Net Core",
-                        type: "backend",
+                        skillType: "backend",
                         proficiencyLevel: "expert"
                     },
                     {
                         name: "Node.js",
-                        type: "backend",
+                        skillType: "backend",
                         proficiencyLevel: "intermediate"
                     },
                     {
                         name: "Java",
-                        type: "backend",
+                        skillType: "backend",
                         proficiencyLevel: "intermediate"
                     },
                     {
                         name: "Python",
-                        type: "backend",
+                        skillType: "backend",
                         proficiencyLevel: "intermediate"
                     },
                     {
                         name: "MongoDb",
-                        type: "backend",
+                        skillType: "backend",
                         proficiencyLevel: "intermediate"
                     },
                     {
                         name: "HTML",
-                        type: "frontend",
+                        skillType: "frontend",
                         proficiencyLevel: "intermediate"
                     },
                     {
                         name: "CSS",
-                        type: "frontend",
+                        skillType: "frontend",
                         proficiencyLevel: "intermediate"
                     },
                     {
                         name: "JavaScript",
-                        type: "frontend",
+                        skillType: "frontend",
                         proficiencyLevel: "expert"
                     },
                     {
                         name: "Vue.js",
-                        type: "frontend",
+                        skillType: "frontend",
                         proficiencyLevel: "expert"
                     },
                     {
                         name: "Angular",
-                        type: "frontend",
+                        skillType: "frontend",
                         proficiencyLevel: "intermediate"
                     },
                 ],

@@ -32,10 +32,10 @@ export default {
             return "Backend developer";
         },
         frontendSkills() {
-            return this.skillSets.filter(x => x.type === "frontend");
+            return this.skillSets.filter(x => x.skillType === "frontend");
         },
         backendSkills() {
-            return this.skillSets.filter(x => x.type === "backend");
+            return this.skillSets.filter(x => x.skillType === "backend");
         }
     }
 };

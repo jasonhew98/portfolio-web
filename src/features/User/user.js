@@ -1,3 +1,4 @@
+import { proficiencyLevelEnum, skillTypeEnum } from '@/seedwork/enums.js'
 
 function assign(target, source) {
     source = source || {};
@@ -25,7 +26,12 @@ function createInstance(options) {
 
 const mixin = {
     methods: {
-
+        getProficiencyLevel(level) {
+            return proficiencyLevelEnum[level];
+        },
+        getSkillType(type) {
+            return skillTypeEnum[type];
+        }
     },
     computed: {
         fullName() {
