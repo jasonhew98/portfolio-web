@@ -92,9 +92,9 @@ export default {
                     {
                         companyName: "Fusionex Group",
                         jobTitle: "Solutions Developer",
-                        isCurrentJob: true,
+                        isCurrentJob: false,
                         startDate: "2020-08-19",
-                        endDate: "",
+                        endDate: "2024-02-29",
                         description: "<ul><li>Active involvement in product development and delivery.</li><li>Solution designs and implementation.</li><li>Full stack web development.</li><li>Involve in research and development of modern tecnnologies such as OpenAI.</li></ul>"
                     }
                 ],
