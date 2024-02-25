@@ -7,7 +7,7 @@
             :firstName="firstName"
             :lastName="lastName"
             :preferredName="preferredName"
-            :introduction="introduction"/>
+            :shortIntroduction="shortIntroduction"/>
         <about 
             ref="about"
             :firstName="firstName"

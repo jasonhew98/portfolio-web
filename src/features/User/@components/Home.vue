@@ -8,7 +8,7 @@
                     :firstName="firstName"
                     :lastName="lastName"
                     :preferredName="preferredName"
-                    :introduction="introduction"/>
+                    :shortIntroduction="shortIntroduction"/>
             </div>
             <scroll-to-button :elementRef="reference"/>
         </div>
@@ -28,7 +28,7 @@ export default {
         firstName: {type: String, required: true, default: ''},
         lastName: {type: String, required: true, default: ''},
         preferredName: {type: String, required: true, default: ''},
-        introduction: {type: String, required: true, default: ''}
+        shortIntroduction: {type: String, required: true, default: ''}
     },
     data: function () {
         return {

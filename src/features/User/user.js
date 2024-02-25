@@ -3,14 +3,15 @@ import { proficiencyLevelEnum, skillTypeEnum } from '@/seedwork/enums.js'
 function assign(target, source) {
     source = source || {};
     
-    target.email = source.email || '';
+    target.email = source.email || "";
 
-    target.firstName = source.firstName || '';
-    target.lastName = source.lastName || '';
-    target.preferredName = source.preferredName || '';
-    target.countryCode = source.countryCode || '';
-    target.contactNumber = source.contactNumber || '';
-    target.introduction = source.introduction || '';
+    target.firstName = source.firstName || "";
+    target.lastName = source.lastName || "";
+    target.preferredName = source.preferredName || "";
+    target.countryCode = source.countryCode || "";
+    target.contactNumber = source.contactNumber || "";
+    target.shortIntroduction = source.shortIntroduction || "";
+    target.introduction = source.introduction || "";
 
     target.workPreferences = source.workPreferences || [];
     target.skillSets = source.skillSets || [];

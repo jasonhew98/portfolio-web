@@ -2,8 +2,8 @@
     <div class="home__introduction">
         <h1 class="home__title">{{ nickname }} <img class="home__hand" src="@/images/hand.svg"/></h1>
         <h3 class="home__subtitle">Software Engineer</h3>
-        <div class="home__description">I'm a Software Engineer with more than 4 years
-            of experience. I'm very passionate and dedicated to my work.
+        <div class="home__description">
+            {{ shortIntroduction }}
         </div>
         <div class="button button--flex" @click="goToContact">Say Hello
             <svg
@@ -36,7 +36,7 @@ export default {
         firstName: {type: String, required: true, default: ''},
         lastName: {type: String, required: true, default: ''},
         preferredName: {type: String, required: true, default: ''},
-        introduction: {type: String, required: true, default: ''}
+        shortIntroduction: {type: String, required: true, default: ''}
     },
     data: function () {
         return {
