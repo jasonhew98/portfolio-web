@@ -6,18 +6,15 @@
 			:type="notification.type"
 			:message="notification.message" /> -->
 		<router-view></router-view>
-		<custom-footer v-if="showFooter"/>
 	</div>
 </template>
 
 <script>
-import CustomFooter from './@components/CustomFooter.vue';
 import CustomToast from './@components/CustomToast.vue';
 
 export default {
 	name: "App",
 	components: {
-		CustomFooter,
 		// CustomToast
 	},
 	data() {
@@ -37,9 +34,6 @@ export default {
         }
     },
 	computed: {
-		showFooter() {
-			return !['/auth', '/profile/me', '/profile/me/edit'].includes(this.$route.path);
-		},
 	},
 	methods: {
 		pushNotification(type, message) {

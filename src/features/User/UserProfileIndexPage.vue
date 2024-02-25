@@ -22,12 +22,14 @@
             :countryCode="countryCode"
             :contactNumber="contactNumber"
             :email="email"/>
+        <custom-footer/>
         <scroll-to-small-button/>
     </div>
 </template>
 
 <script>
 import { createInstance, mixin as RecordMixin, assign } from './user.js';
+import CustomFooter from '@/@components/CustomFooter.vue';
 import NavBar from './@components/NavBar.vue';
 import Home from './@components/Home.vue';
 import About from './@components/About.vue';
@@ -43,6 +45,7 @@ export default {
     name: 'UserProfileViewPage',
     mixins: [RecordMixin, pageBehaviour],
     components: {
+        CustomFooter,
         NavBar,
         Home,
         About,

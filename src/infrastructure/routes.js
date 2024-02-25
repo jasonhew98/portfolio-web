@@ -4,8 +4,14 @@ import AuthIndexPage from '../features/Auth/AuthIndexPage.vue'
 import UserProfileIndexPage from '../features/User/UserProfileIndexPage.vue'
 import UserProfileViewPage from '../features/User/UserProfileViewPage.vue'
 import UserProfileEditPage from '../features/User/UserProfileEditPage.vue'
+import NotFound from '../NotFound.vue'
 
 const routes = [
+    {
+        path: "/:pathMatch(.*)*",
+        name: "NotFound",
+        component: NotFound 
+    },
     {
         path : "/profile/me",
         name: "UserProfileViewPage",
