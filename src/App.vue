@@ -1,5 +1,5 @@
 <template>
-  	<div>
+  	<div class="content__container">
 		<!-- <CustomToast
 			v-for="notification in activeNotifications"
 			:key="notification.id"
