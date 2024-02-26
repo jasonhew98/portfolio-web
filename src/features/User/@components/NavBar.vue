@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        <nav class="nav">
+        <nav class="nav content__container">
             <a href="/" class="nav__logo">Jason</a>
             <div :class="navMenuClass">
                 <ul class="nav__list grid">
@@ -57,6 +57,7 @@ export default {
 
 .header {
     width: 100%;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
@@ -69,8 +70,6 @@ export default {
     justify-content: space-between;
     align-items: center;
     column-gap: 1rem;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .nav__logo {
@@ -125,7 +124,6 @@ export default {
 
 @media only screen and (max-width: 768px) {
     .header {
-        position: fixed;
         top: initial;
         bottom: 0;
     }
@@ -186,19 +184,7 @@ export default {
     }
 }
 
-@media only screen and (max-width: 992px) {
-    .nav {
-        margin-left: var(--mb-1-5);
-        margin-right: var(--mb-1-5);
-    }
-}
-
 @media only screen and (max-width: 350px) {
-    .nav {
-        margin-left: var(--mb-1);
-        margin-right: var(--mb-1);
-    }
-
     .nav__menu {
         padding: 2rem 0.25rem 4rem
     }
