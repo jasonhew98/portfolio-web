@@ -98,6 +98,9 @@ export default {
     },
     methods: {
         sendEmail() {
+            if (!senderMessage)
+                return;
+            
             emailjs.sendForm(
                 process.env.VUE_APP_EMAIL_SERVICE_SERVICE_ID,
                 process.env.VUE_APP_EMAIL_SERVICE_TEMPLATE_ID,
