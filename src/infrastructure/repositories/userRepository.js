@@ -96,6 +96,14 @@ export default {
                         startDate: "2020-08-19",
                         endDate: "2024-02-29",
                         description: "<ul><li>Active involvement in product development and delivery.</li><li>Solution designs and implementation.</li><li>Full stack web development.</li><li>Involve in research and development of modern tecnnologies such as OpenAI.</li></ul>"
+                    },
+                    {
+                        companyName: "Smartrak",
+                        jobTitle: "Senior Software Engineer",
+                        isCurrentJob: true,
+                        startDate: "2024-03-11",
+                        endDate: "",
+                        description: ""
                     }
                 ],
                 projects: [
