@@ -79,6 +79,11 @@ export default {
                         skillType: "frontend",
                         proficiencyLevel: "intermediate"
                     },
+                    {
+                        name: "React.js",
+                        skillType: "frontend",
+                        proficiencyLevel: "intermediate"
+                    },
                 ],
                 jobHistory: [
                     {
